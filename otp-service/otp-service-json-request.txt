@@ -1,0 +1,35 @@
+Customer service:
+========================
+addCustomer: POST
+URL: http://localhost:2023/api/v1/save
+Request:
+{
+    "customerId":"101",
+    "mobileNo":"8788778888",
+    "firstName":"Suresh Kumar"
+}
+---------------------
+getOtp: POST
+URL: http://localhost:2023/api/v1/otp/get
+Request:
+{
+    "mobileNo":"8788778888",
+    "flag":""
+}
+---------------------
+resendOtp: POST
+URL: http://localhost:2023/api/v1/otp/resend
+Request:
+{
+    "refId":"169166619360878888"
+}
+---------------------
+
+verifyOtp: POST
+URL: http://localhost:2023/api/v1/otp/validate
+Request:
+{
+    "refId":"169166679250052491",
+    "otpNumber":"956345"
+}
+---------------------

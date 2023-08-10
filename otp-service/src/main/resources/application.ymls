@@ -1,0 +1,47 @@
+springProfile: development
+---
+server:
+  port: 9081
+  servlet:
+    contextPath: ${CONTEXT_PATH:/}
+---
+logging:
+  level:
+    root: INFO
+    com.neom: DEBUG
+
+---
+springfox:
+  documentation:
+    enabled: true
+---
+management:
+  endpoints:
+    enabled-by-default: true
+    web.exposure.include: info, health
+  endpoint:
+    health:
+      show-details: always
+
+info:
+  app:
+    name: NEOM PAY OTP API
+
+---
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/swiggy_microservice
+    username: postgres
+    password: suresh
+
+  jpa:
+    properties:
+      hibernate:
+        #jdbc.lob.non_contextual_creation: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        #default_schema: neom
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+---
+
